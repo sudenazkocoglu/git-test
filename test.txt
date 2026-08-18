@@ -1,0 +1,3 @@
+satir 1
+satir 2
+satir 3
