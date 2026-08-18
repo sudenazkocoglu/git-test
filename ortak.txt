@@ -1,1 +1,1 @@
-Merhaba, bu proje için ilk satır
+Bu satırı ana dal (main) degistirdi
