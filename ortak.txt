@@ -1,1 +1,2 @@
-Bu satırı ana dal (main) degistirdi
+Bu satırı ana dal ve dal-2 ortak kararla düzeltti
+
