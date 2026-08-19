@@ -1,4 +1,4 @@
-## Ödev 1.3 - Uygulanan Git Komutları ve Senaryolar
+## Git Senaryo Egzersizi - Ödev 1.3 
 
 **1. Yanlış dala commit atıp doğru dala taşıma (Cherry-pick & Reset):**
 ```bash
