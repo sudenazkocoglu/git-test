@@ -60,8 +60,15 @@ Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık com
 # Son 3 commit üzerinde interaktif rebase başlatma
 git rebase -i HEAD~3
 # Açılan editörde ilk commit 'pick', diğerleri 'squash' (s) olarak işaretlenip kaydedilmiştir.
-Gerçek İşlem Kanıtı:
-d1f3577 docs: odev 1.3 senaryo komutlari not edildi
+
+Gerçek İşlem Kanıtı (Git Log):
+```text
+* c031baa (HEAD -> test-squash) feat: 3 taslak commit squash ile birlestirildi
+* b902aec (origin/main, main) docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
+* 035c7db feat: cherry-pick edilecek ornek commit
+* 6972b7a Fix formatting and update command sections in README
+* 54002d2 docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi 
+```
 
 ## 4. .env Temizliği Senaryosu
 Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla dahil edilmesini önlemek ve .gitignore kuralını uygulamak amacıyla yapılan temizlik adımıdır.
