@@ -58,6 +58,7 @@ Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık com
 
 ## Uygulanan Komutlar:
 # Son 3 commit üzerinde interaktif rebase başlatma
+```bash
 git rebase -i HEAD~3
 # Açılan editörde ilk commit 'pick', diğerleri 'squash' (s) olarak işaretlenip kaydedilmiştir.
 
