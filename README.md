@@ -72,6 +72,13 @@ Gerçek İşlem Kanıtı (Git Log):
 
 ## 4. .env Temizliği Senaryosu
 Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla dahil edilmesini önlemek ve .gitignore kuralını uygulamak amacıyla yapılan temizlik adımıdır.
+ ```text
+* 033237f (HEAD -> main) fix: .env dosyasi git takibinden cikarildi ve temizlendi
+* b85e272 feat: projeye env dosyasi eklendi (yanlislikla)
+* 847e016 (origin/main) docs: odev 1.3 - squash senaryosu gercek log kaniti ile guncellendi
+* b902aec docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
+* 035c7db feat: cherry-pick edilecek ornek commit
+```
 
 ## Uygulanan Komutlar:
 # .env dosyasının takipten çıkarılması
