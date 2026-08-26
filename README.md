@@ -97,10 +97,13 @@ git bisect good / bad
 # İşlem tamamlandıktan sonra normal duruma dönmek için:
 git bisect reset
 
-## Proje Git Geçmişi ve Kanıtlar (Git Log)
-Bu projede gerçekleştirilen tüm operasyonların terminaldeki gerçek git log --oneline çıktısı şöyledir:
-54002d2 (HEAD -> main, origin/main) docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
-4280404 Update title and section heading in README.md
-d1f3577 docs: odev 1.3 senaryo komutlari not edildi
-4b5f049 conflict cozuldu ve README birlestirildi
-5b980e6 docs: 1.3 odev iicin README eklendi
+## Gerçek İşlem Kanıtı (Git Log ve Bisect Çıktısı)
+```text
+*   035c7db (HEAD -> main, origin/main) feat: cherry-pick edilecek ornek commit
+|\  
+| * c031baa feat: 3 taslak commit squash ile birlestirildi
+* | b902aec docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
+|/  
+* 54002d2 docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
+* 4280404 Update title and section heading in README.md
+```
