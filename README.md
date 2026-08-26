@@ -15,19 +15,43 @@ Bu repo; Git versiyon kontrol sisteminin gelişmiş özelliklerini (Merge Confli
   # Çakışmalı dosya manuel düzenlendikten sonra:
   git add <dosya_adi>
   git commit -m "fix: merge conflict elle cozuldu"
+
   Gerçek Commit Kanıtı:
   4b5f049 conflict cozuldu ve README birlestirildi
 
+
+  ```
 ## 2. Cherry-pick ve Reset Senaryosu
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
 
-## Uygulanan Komutlar:
-# Doğru dala geçiş ve commit'i çekme
-git checkout dogru-dal
-git cherry-pick <commit-hash>
-# Yanlış dala dönüp son commit'i geri alma
-git checkout yanlis-dal
+Uygulanan Komutlar:
+```bash
+# Doğru dala (main) geçiş ve commit'i çekme
+git checkout main
+git cherry-pick 8d2b4ad
+
+# Test dalına dönüp oradaki fazla commit'i temizleme
+git checkout test-cherry-pick
+
 git reset --hard HEAD~1
+
+Gerçek İşlem Kanıtı (Git Log):
+```text
+
+* 5fc3cd2 (HEAD -> main) feat: cherry-pick edilecek ornek commit
+* 54002d2 (origin/main) docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
+* 4280404 Update title and section heading in README.md
+* d1f3577 docs: odev 1.3 senaryo komutlari not edildi
+*   4b5f049 conflict cozuldu ve README birlestirildi
+|\  
+| * 9bdf1c3 Create README.md
+* | 5b980e6 docs: 1.3 ödevi için README eklendi
+* | a59562c fix: merge conflict elle cozuldu
+|/  
+* | f5faee8 (dal-2) fix: dal-2 tarafindan guncellendi
+* | ae935c7 fix: main tarafindan guncellendi
+
+```
 
 ## 3. Rebase ve Squash Senaryosu
 Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık commit'i tek bir anlamlı commit altında birleştirmek (squash) için interaktif rebase kullanılmıştır.
