@@ -9,7 +9,7 @@ Bu repo; Git versiyon kontrol sisteminin gelişmiş özelliklerini (Merge Confli
 * **Açıklama:** İki farklı dalda (`main` ve `dal-2`) aynı dosya üzerinde eşzamanlı değişiklikler yapılarak çakışma (conflict) üretilmiş, ardından manuel olarak çözülüp `merge` edilmiştir.
 
 ## Uygulanan Komutlar:
-```bash
+
 # Çakışma yaratılan dalların birleştirilmesi sırasında oluşan conflict'in çözümü:
 git status
 # Çakışmalı dosya manuel düzenlendikten sonra:
