@@ -15,7 +15,7 @@ git status
 # Çakışmalı dosya manuel düzenlendikten sonra:
 git add <dosya_adi>
 git commit -m "fix: merge conflict elle cozuldu"
-```
+
 
 2. Cherry-pick ve Reset Senaryosu
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
