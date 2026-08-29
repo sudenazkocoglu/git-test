@@ -15,6 +15,7 @@ git status
 # Çakışmalı dosya manuel düzenlendikten sonra:
 git add <dosya_adi>
 git commit -m "fix: merge conflict elle cozuldu"
+```
 
 2. Cherry-pick ve Reset Senaryosu
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
@@ -41,6 +42,7 @@ Gerçek İşlem Kanıtı (Git Log):
 |/  
 * | f5faee8 (dal-2) fix: dal-2 tarafindan guncellendi
 * | ae935c7 fix: main tarafindan guncellendi
+```
 
 3. Rebase ve Squash Senaryosu
 Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık commit'i tek bir anlamlı commit altında birleştirmek (squash) için interaktif rebase kullanılmıştır.
@@ -56,6 +58,7 @@ Gerçek İşlem Kanıtı (Git Log):
 * 035c7db feat: cherry-pick edilecek ornek commit
 * 6972b7a Fix formatting and update command sections in README
 * 54002d2 docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
+```
 
 4. .env Temizliği Senaryosu
 Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla dahil edilmesini önlemek ve .gitignore kuralını uygulamak amacıyla yapılan temizlik adımıdır.
@@ -71,6 +74,7 @@ Gerçek İşlem Kanıtı (Git Log):
 * 847e016 (origin/main) docs: odev 1.3 - squash senaryosu gercek log kaniti ile guncellendi
 * b902aec docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
 * 035c7db feat: cherry-pick edilecek ornek commit
+```
 
 5. Git Bisect Senaryosu
 Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili arama (binary search) algoritmasıyla bulmak için git bisect aracı kullanılmıştır.
@@ -91,4 +95,5 @@ Author: Sudenaz Kocoglu
 $ git bisect reset
 Previous HEAD position was 035c7db feat: cherry-pick edilecek ornek commit
 Switched to branch 'main'
+```
 
