@@ -3,7 +3,7 @@
 Bu repo; Git versiyon kontrol sisteminin gelişmiş özelliklerini (Merge Conflict, Cherry-pick, Reset, Rebase Squash, Ignore/Temizlik ve Bisect) uygulamalı olarak test etmek ve kanıtlamak amacıyla oluşturulmuştur.
 
 ---
-
+```bash
 ## 1. Merge Conflict (Çakışma) Senaryosu
 * **Durum:** Kanıtlı ve geçmişte commit kayıtlarıyla sabittir.
 * **Açıklama:** İki farklı dalda (`main` ve `dal-2`) aynı dosya üzerinde eşzamanlı değişiklikler yapılarak çakışma (conflict) üretilmiş, ardından manuel olarak çözülüp `merge` edilmiştir.
