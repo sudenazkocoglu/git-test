@@ -9,21 +9,16 @@ Bu repo; Git versiyon kontrol sisteminin gelişmiş özelliklerini (Merge Confli
 * **Durum:** Kanıtlı ve geçmişte commit kayıtlarıyla sabittir.
 * **Açıklama:** İki farklı dalda (`main` ve `dal-2`) aynı dosya üzerinde eşzamanlı değişiklikler yapılarak çakışma (conflict) üretilmiş, ardından manuel olarak çözülüp `merge` edilmiştir.
   ## Uygulanan Komutlar:
-  ```bash
-  # Çakışma yaratılan dalların birleştirilmesi sırasında oluşan conflict'in çözümü:
-  git status
-  # Çakışmalı dosya manuel düzenlendikten sonra:
-  git add <dosya_adi>
-  git commit -m "fix: merge conflict elle cozuldu"
+```bash
+# Çakışma yaratılan dalların birleştirilmesi sırasında oluşan conflict'in çözümü:
+git status
+# Çakışmalı dosya manuel düzenlendikten sonra:
+git add <dosya_adi>
+git commit -m "fix: merge conflict elle cozuldu"
+```
 
-  Gerçek Commit Kanıtı:
-  4b5f049 conflict cozuldu ve README birlestirildi
-
-
-  ```
 ## 2. Cherry-pick ve Reset Senaryosu
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
-
 Uygulanan Komutlar:
 ```bash
 # Doğru dala (main) geçiş ve commit'i çekme
@@ -82,8 +77,12 @@ Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla d
 
 ## Uygulanan Komutlar:
 # .env dosyasının takipten çıkarılması
+## Uygulanan Komutlar:
+
+```bash
 git rm --cached .env
 git commit -m "fix: .env dosyasi takipten cikarildi"
+```
 
 ## 5. Git Bisect Senaryosu
 Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili arama (binary search) algoritmasıyla bulmak için git bisect aracı kullanılmıştır.
@@ -94,6 +93,7 @@ Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili
 $git bisect start$ git bisect bad
 
 $ git bisect good 54002d2
+
 Bisecting: 1 revision left to test after this (roughly 1 step)
 [035c7db6d2214d42fd807977e16d89d581ee3d5c] feat: cherry-pick edilecek ornek commit
 
