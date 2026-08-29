@@ -88,22 +88,22 @@ git commit -m "fix: .env dosyasi takipten cikarildi"
 ## 5. Git Bisect Senaryosu
 Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili arama (binary search) algoritmasıyla bulmak için git bisect aracı kullanılmıştır.
 
-## Uygulanan Komutlar:
-git bisect start
-git bisect bad                 # Mevcut hatalı durum
-git bisect good <eski-commit>   # Hatanın olmadığı bilinen son çalışan commit
-# Git otomatik olarak orta noktadaki commit'i test için seçer. Test sonucuna göre:
-git bisect good / bad
-# İşlem tamamlandıktan sonra normal duruma dönmek için:
-git bisect reset
+## Gerçek İşlem Kanıtı (Terminal Çıktısı):
 
-## Gerçek İşlem Kanıtı (Git Log ve Bisect Çıktısı)
-```text
-*   035c7db (HEAD -> main, origin/main) feat: cherry-pick edilecek ornek commit
-|\  
-| * c031baa feat: 3 taslak commit squash ile birlestirildi
-* | b902aec docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
-|/  
-* 54002d2 docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
-* 4280404 Update title and section heading in README.md
+```bash
+$git bisect start$ git bisect bad
+
+$ git bisect good 54002d2
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[035c7db6d2214d42fd807977e16d89d581ee3d5c] feat: cherry-pick edilecek ornek commit
+
+$ git bisect bad
+035c7db6d2214d42fd807977e16d89d581ee3d5c is the first bad commit
+commit 035c7db6d2214d42fd807977e16d89d581ee3d5c
+Author: Sudenaz Kocoglu
+
+$ git bisect reset
+Previous HEAD position was 035c7db feat: cherry-pick edilecek ornek commit
+Switched to branch 'main'
 ```
+
