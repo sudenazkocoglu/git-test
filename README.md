@@ -51,37 +51,44 @@ Gerçek İşlem Kanıtı (Git Log):
 Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık commit'i tek bir anlamlı commit altında birleştirmek (squash) için interaktif rebase kullanılmıştır.
 
 **Uygulanan Komutlar:**
+```
 # Son 3 commit üzerinde interaktif rebase başlatma
 git rebase -i HEAD~3
 # Açılan editörde ilk commit 'pick', diğerleri 'squash' (s) olarak işaretlenip kaydedilmiştir.
+``` 
 Gerçek İşlem Kanıtı (Git Log):
+```
 * c031baa (HEAD -> test-squash) feat: 3 taslak commit squash ile birlestirildi
 * b902aec (origin/main, main) docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
 * 035c7db feat: cherry-pick edilecek ornek commit
 * 6972b7a Fix formatting and update command sections in README
 * 54002d2 docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
-
+```
 ## 4. .env Temizliği Senaryosu
 Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla dahil edilmesini önlemek ve .gitignore kuralını uygulamak amacıyla yapılan temizlik adımıdır.
 
 **Uygulanan Komutlar:**
+```
 # .env dosyasının takipten çıkarılması
 git rm --cached .env
 git commit -m "fix: .env dosyasi takipten cikarildi"
+```
 Gerçek İşlem Kanıtı (Git Log):
+```
 * 033237f (HEAD -> main) fix: .env dosyasi git takibinden cikarildi ve temizlendi
 * b85e272 feat: projeye env dosyasi eklendi (yanlislikla)
 * 847e016 (origin/main) docs: odev 1.3 - squash senaryosu gercek log kaniti ile guncellendi
 * b902aec docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
 * 035c7db feat: cherry-pick edilecek ornek commit
+```
 
 ## 5. Git Bisect Senaryosu
 Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili arama (binary search) algoritmasıyla bulmak için git bisect aracı kullanılmıştır.
 
 Gerçek İşlem Kanıtı (Terminal Çıktısı):
 ```bash
-$git bisect start$
- git bisect bad
+$git bisect start
+$git bisect bad
 
 $ git bisect good 54002d2
 
