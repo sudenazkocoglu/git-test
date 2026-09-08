@@ -31,7 +31,7 @@ git cherry-pick 8d2b4ad
 git checkout test-cherry-pick
 git reset --hard HEAD~1
 ```
-Gerçek İşlem Kanıtı (Git Log):
+**Gerçek İşlem Kanıtı (Git Log):**
 ```
 * 5fc3cd2 (HEAD -> main) feat: cherry-pick edilecek ornek commit
 * 54002d2 (origin/main) docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
@@ -56,7 +56,7 @@ Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık com
 git rebase -i HEAD~3
 # Açılan editörde ilk commit 'pick', diğerleri 'squash' (s) olarak işaretlenip kaydedilmiştir.
 ``` 
-Gerçek İşlem Kanıtı (Git Log):
+**Gerçek İşlem Kanıtı (Git Log):**
 ```
 * c031baa (HEAD -> test-squash) feat: 3 taslak commit squash ile birlestirildi
 * b902aec (origin/main, main) docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
@@ -73,7 +73,7 @@ Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla d
 git rm --cached .env
 git commit -m "fix: .env dosyasi takipten cikarildi"
 ```
-Gerçek İşlem Kanıtı (Git Log):
+**Gerçek İşlem Kanıtı (Git Log):**
 ```
 * 033237f (HEAD -> main) fix: .env dosyasi git takibinden cikarildi ve temizlendi
 * b85e272 feat: projeye env dosyasi eklendi (yanlislikla)
@@ -85,7 +85,7 @@ Gerçek İşlem Kanıtı (Git Log):
 ## 5. Git Bisect Senaryosu
 Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili arama (binary search) algoritmasıyla bulmak için git bisect aracı kullanılmıştır.
 
-Gerçek İşlem Kanıtı (Terminal Çıktısı):
+**Gerçek İşlem Kanıtı (Terminal Çıktısı):**
 ```bash
 $git bisect start
 $git bisect bad
