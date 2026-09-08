@@ -32,7 +32,7 @@ git checkout test-cherry-pick
 git reset --hard HEAD~1
 ```
 Gerçek İşlem Kanıtı (Git Log):
-
+```
 * 5fc3cd2 (HEAD -> main) feat: cherry-pick edilecek ornek commit
 * 54002d2 (origin/main) docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
 * 4280404 Update title and section heading in README.md
@@ -45,7 +45,7 @@ Gerçek İşlem Kanıtı (Git Log):
 |/  
 * | f5faee8 (dal-2) fix: dal-2 tarafindan guncellendi
 * | ae935c7 fix: main tarafindan guncellendi
-
+```
 
 ## 3. Rebase ve Squash Senaryosu
 Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık commit'i tek bir anlamlı commit altında birleştirmek (squash) için interaktif rebase kullanılmıştır.
