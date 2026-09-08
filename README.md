@@ -18,7 +18,7 @@ git commit -m "fix: merge conflict elle cozuldu"
 ```
 
 ## 2. Cherry-pick ve Reset Senaryosu
-```
+
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
 
 **Uygulanan Komutlar:**
@@ -29,6 +29,7 @@ git cherry-pick 8d2b4ad
 # Test dalına dönüp oradaki fazla commit'i temizleme
 git checkout test-cherry-pick
 git reset --hard HEAD~1
+```
 Gerçek İşlem Kanıtı (Git Log):
 * 5fc3cd2 (HEAD -> main) feat: cherry-pick edilecek ornek commit
 * 54002d2 (origin/main) docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
@@ -42,7 +43,7 @@ Gerçek İşlem Kanıtı (Git Log):
 |/  
 * | f5faee8 (dal-2) fix: dal-2 tarafindan guncellendi
 * | ae935c7 fix: main tarafindan guncellendi
-```
+
 
 ## 3. Rebase ve Squash Senaryosu
 Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık commit'i tek bir anlamlı commit altında birleştirmek (squash) için interaktif rebase kullanılmıştır.
@@ -77,7 +78,8 @@ Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili
 
 Gerçek İşlem Kanıtı (Terminal Çıktısı):
 ```bash
-$git bisect start$ git bisect bad
+$git bisect start$
+ git bisect bad
 
 $ git bisect good 54002d2
 
