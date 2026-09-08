@@ -22,7 +22,7 @@ git commit -m "fix: merge conflict elle cozuldu"
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
 
 **Uygulanan Komutlar:**
-Doğru dala (main) geçiş ve commit'i çekme
+# Doğru dala (main) geçiş ve commit'i çekme
 git checkout main
 git cherry-pick 8d2b4ad
 
@@ -31,6 +31,7 @@ git checkout test-cherry-pick
 git reset --hard HEAD~1
 ```
 Gerçek İşlem Kanıtı (Git Log):
+```
 * 5fc3cd2 (HEAD -> main) feat: cherry-pick edilecek ornek commit
 * 54002d2 (origin/main) docs: git-test README senaryo basliklari ve duzenli kod bloklariyla guncellendi
 * 4280404 Update title and section heading in README.md
@@ -43,12 +44,12 @@ Gerçek İşlem Kanıtı (Git Log):
 |/  
 * | f5faee8 (dal-2) fix: dal-2 tarafindan guncellendi
 * | ae935c7 fix: main tarafindan guncellendi
-
+```
 
 ## 3. Rebase ve Squash Senaryosu
 Açıklama: Git geçmişini (history) düzenlemek ve birden fazla ardışık commit'i tek bir anlamlı commit altında birleştirmek (squash) için interaktif rebase kullanılmıştır.
 
-Uygulanan Komutlar:
+**Uygulanan Komutlar:**
 # Son 3 commit üzerinde interaktif rebase başlatma
 git rebase -i HEAD~3
 # Açılan editörde ilk commit 'pick', diğerleri 'squash' (s) olarak işaretlenip kaydedilmiştir.
@@ -62,7 +63,7 @@ Gerçek İşlem Kanıtı (Git Log):
 ## 4. .env Temizliği Senaryosu
 Açıklama: Hassas bilgilerin (.env) versiyon kontrol sistemine yanlışlıkla dahil edilmesini önlemek ve .gitignore kuralını uygulamak amacıyla yapılan temizlik adımıdır.
 
-Uygulanan Komutlar:
+**Uygulanan Komutlar:**
 # .env dosyasının takipten çıkarılması
 git rm --cached .env
 git commit -m "fix: .env dosyasi takipten cikarildi"
