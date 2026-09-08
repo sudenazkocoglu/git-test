@@ -22,7 +22,7 @@ git commit -m "fix: merge conflict elle cozuldu"
 Açıklama: Yanlış dala atılan bir commit'in cherry-pick ile doğru dala alınması ve eski daldaki fazlalık commit'in reset ile temizlenmesi sürecidir.
 
 **Uygulanan Komutlar:**
-# Doğru dala (main) geçiş ve commit'i çekme
+Doğru dala (main) geçiş ve commit'i çekme
 git checkout main
 git cherry-pick 8d2b4ad
 
