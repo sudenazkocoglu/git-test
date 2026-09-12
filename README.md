@@ -82,6 +82,7 @@ git commit -m "fix: .env dosyasi takipten cikarildi"
 * b902aec docs: odev 1.3 - cherry-pick senaryosu gercek log kaniti ile guncellendi
 * 035c7db feat: cherry-pick edilecek ornek commit
 ```
+**Not:** Geçmişi temizlemeden önce mutlaka mevcut şifrenin/anahtarın iptal edilmesi (revoke) veya değiştirilmesi gerekir. Eğer şifreyi değiştirmeden sadece Git geçmişini silerseniz, repoyu daha önce clone'lamış veya fork'lamış kişilerin yerel kopyalarında eski şifre yaşamaya devam eder ve büyük bir güvenlik açığı yaratır. Bu yüzden sıra her zaman "önce şifreyi iptal et, sonra geçmişi temizle" olmalıdır. 
 
 ## 5. Git Bisect Senaryosu
 Açıklama: Kod tabanında hatanın (bug) ilk ortaya çıktığı commit'i ikili arama (binary search) algoritmasıyla bulmak için git bisect aracı kullanılmıştır.
